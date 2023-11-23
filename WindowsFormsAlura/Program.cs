@@ -16,7 +16,9 @@ namespace WindowsFormsAlura
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_HelloWorld());
+            //Application.Run(new Form_HelloWorld());
+            Application.Run(new Form_DemonstracaoKey());
+
         }
     }
 }
