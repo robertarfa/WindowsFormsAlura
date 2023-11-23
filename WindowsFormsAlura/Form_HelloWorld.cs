@@ -17,9 +17,19 @@ namespace WindowsFormsAlura
             InitializeComponent();
         }
 
-        private void btn_Sair_Click(object sender, EventArgs e)
+        private void Btn_Sair_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Btn_ModificaTexto_Click(object sender, EventArgs e)
+        {
+            label_Titulo.Text = txt_ConteudoLabel.Text;
+        }
+
+        private void Form_HelloWorld_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
