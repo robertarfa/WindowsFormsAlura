@@ -61,6 +61,12 @@
     <Compile Include="Form_HelloWorld.Designer.cs">
       <DependentUpon>Form_HelloWorld.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Mascara.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Mascara.Designer.cs">
+      <DependentUpon>Form_Mascara.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ValidaSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_HelloWorld.resx">
       <DependentUpon>Form_HelloWorld.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Mascara.resx">
+      <DependentUpon>Form_Mascara.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ValidaSenha.resx">
       <DependentUpon>Form_ValidaSenha.cs</DependentUpon>

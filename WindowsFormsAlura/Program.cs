@@ -18,7 +18,8 @@ namespace WindowsFormsAlura
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new Form_HelloWorld());
             // Application.Run(new Form_DemonstracaoKey());
-            Application.Run(new Form_ValidaSenha());
+            // Application.Run(new Form_ValidaSenha());
+            Application.Run(new Form_Mascara());
 
         }
     }
