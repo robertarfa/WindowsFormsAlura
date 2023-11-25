@@ -10,18 +10,21 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAlura
 {
-    public partial class Form_ValidaCPF : Form
+    public partial class Form_ValidaCPF2 : Form
     {
-        public Form_ValidaCPF()
+        public Form_ValidaCPF2()
         {
             InitializeComponent();
         }
 
+        private void Form_ValidaCPF2_Load(object sender, EventArgs e)
+        {
 
+        }
 
         private void Btn_Reset_Click(object sender, EventArgs e)
         {
-            Lbl_Resultado.Text = string.Empty;
+
             Msk_CPF.Text = string.Empty;
         }
 
@@ -33,13 +36,15 @@ namespace WindowsFormsAlura
 
             if (validaCPF)
             {
-                Lbl_Resultado.Text = "CPF Válido";
-                Lbl_Resultado.ForeColor = Color.Green;
+
+                MessageBox.Show("CPF Válido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
             }
             else
             {
-                Lbl_Resultado.Text = "CPF Inválido";
-                Lbl_Resultado.ForeColor = Color.Red;
+
+                MessageBox.Show("CPF Inválido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

@@ -20,7 +20,8 @@ namespace WindowsFormsAlura
             // Application.Run(new Form_DemonstracaoKey());
             // Application.Run(new Form_ValidaSenha());
             //Application.Run(new Form_Mascara());
-            Application.Run(new Form_ValidaCPF());
+            //Application.Run(new Form_ValidaCPF());
+            Application.Run(new Form_ValidaCPF2());
 
         }
     }

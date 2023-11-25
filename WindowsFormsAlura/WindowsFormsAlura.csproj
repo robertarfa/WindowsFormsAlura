@@ -49,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cls_Uteis.cs" />
     <Compile Include="Form_DemonstracaoKey.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +74,12 @@
     <Compile Include="Form_ValidaCPF.Designer.cs">
       <DependentUpon>Form_ValidaCPF.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_ValidaCPF2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_ValidaCPF2.Designer.cs">
+      <DependentUpon>Form_ValidaCPF2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ValidaSenha.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ValidaCPF.resx">
       <DependentUpon>Form_ValidaCPF.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ValidaCPF2.resx">
+      <DependentUpon>Form_ValidaCPF2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ValidaSenha.resx">
       <DependentUpon>Form_ValidaSenha.cs</DependentUpon>
