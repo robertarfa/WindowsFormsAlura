@@ -68,6 +68,12 @@
     <Compile Include="Form_Mascara.Designer.cs">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Principal.Designer.cs">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_ValidaCPF.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Mascara.resx">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Principal.resx">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_ValidaCPF.resx">
       <DependentUpon>Form_ValidaCPF.cs</DependentUpon>

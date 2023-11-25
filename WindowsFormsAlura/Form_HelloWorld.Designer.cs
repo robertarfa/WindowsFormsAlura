@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_HelloWorld));
             this.label_Titulo = new System.Windows.Forms.Label();
             this.btn_Sair = new System.Windows.Forms.Button();
             this.btn_ModificaTexto = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.label_Titulo.Size = new System.Drawing.Size(255, 24);
             this.label_Titulo.TabIndex = 0;
             this.label_Titulo.Text = "Visual Studio .Net Version";
-            this.label_Titulo.UseWaitCursor = true;
             // 
             // btn_Sair
             // 
@@ -53,7 +53,6 @@
             this.btn_Sair.TabIndex = 1;
             this.btn_Sair.Text = "Fechar a aplicação";
             this.btn_Sair.UseVisualStyleBackColor = true;
-            this.btn_Sair.UseWaitCursor = true;
             this.btn_Sair.Click += new System.EventHandler(this.Btn_Sair_Click);
             // 
             // btn_ModificaTexto
@@ -82,10 +81,10 @@
             this.Controls.Add(this.btn_ModificaTexto);
             this.Controls.Add(this.btn_Sair);
             this.Controls.Add(this.label_Titulo);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_HelloWorld";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hello World";
-            this.UseWaitCursor = true;
-            this.Load += new System.EventHandler(this.Form_HelloWorld_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -19,7 +19,8 @@ namespace WindowsFormsAlura
 
         private void Btn_Sair_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            //Application.Exit();
+            this.Close();
         }
 
         private void Btn_ModificaTexto_Click(object sender, EventArgs e)
@@ -27,9 +28,6 @@ namespace WindowsFormsAlura
             label_Titulo.Text = txt_ConteudoLabel.Text;
         }
 
-        private void Form_HelloWorld_Load(object sender, EventArgs e)
-        {
 
-        }
     }
 }

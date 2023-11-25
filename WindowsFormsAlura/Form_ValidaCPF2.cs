@@ -31,22 +31,38 @@ namespace WindowsFormsAlura
         private void Btn_Valida_Click(object sender, EventArgs e)
         {
 
-            var question = MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            string vConteudo;
+            vConteudo = Msk_CPF.Text;
+            vConteudo = vConteudo.Replace(".", "").Replace("-", "").Trim();
 
-            if (question == DialogResult.Yes)
+            if (string.IsNullOrEmpty(vConteudo))
             {
+                MessageBox.Show("Você deve digitar um CPF", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (vConteudo.Length < 11)
+            {
+                MessageBox.Show("CPF deve ter 11 dígitos", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                var validaCPF = false;
+            }
+            else
+            {
+                var question = MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                validaCPF = Cls_Uteis.Valida(Msk_CPF.Text);
-
-                if (validaCPF)
+                if (question == DialogResult.Yes)
                 {
-                    MessageBox.Show("CPF Válido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("CPF Inválido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    var validaCPF = false;
+
+                    validaCPF = Cls_Uteis.Valida(Msk_CPF.Text);
+
+                    if (validaCPF)
+                    {
+                        MessageBox.Show("CPF Válido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("CPF Inválido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
