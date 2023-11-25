@@ -30,21 +30,24 @@ namespace WindowsFormsAlura
 
         private void Btn_Valida_Click(object sender, EventArgs e)
         {
-            var validaCPF = false;
 
-            validaCPF = Cls_Uteis.Valida(Msk_CPF.Text);
+            var question = MessageBox.Show("Você deseja realmente validar o CPF?", "Mensagem de Validação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            if (validaCPF)
+            if (question == DialogResult.Yes)
             {
 
-                MessageBox.Show("CPF Válido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                var validaCPF = false;
 
+                validaCPF = Cls_Uteis.Valida(Msk_CPF.Text);
 
-            }
-            else
-            {
-
-                MessageBox.Show("CPF Inválido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                if (validaCPF)
+                {
+                    MessageBox.Show("CPF Válido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("CPF Inválido", "Mensagem de Validação", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
     }
