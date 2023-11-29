@@ -5,6 +5,8 @@ VisualStudioVersion = 17.8.34309.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsAlura", "WindowsFormsAlura\WindowsFormsAlura.csproj", "{3E102A97-3A7C-474B-815B-CAC8C9068D57}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoWindowsFormsBiblioteca", "CursoWindowsFormsBiblioteca\CursoWindowsFormsBiblioteca.csproj", "{33E18EB0-A026-47A4-9088-0CEBBC2DE8B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{3E102A97-3A7C-474B-815B-CAC8C9068D57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3E102A97-3A7C-474B-815B-CAC8C9068D57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3E102A97-3A7C-474B-815B-CAC8C9068D57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33E18EB0-A026-47A4-9088-0CEBBC2DE8B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33E18EB0-A026-47A4-9088-0CEBBC2DE8B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33E18EB0-A026-47A4-9088-0CEBBC2DE8B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33E18EB0-A026-47A4-9088-0CEBBC2DE8B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
