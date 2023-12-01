@@ -36,7 +36,7 @@
     <StartupObject>WindowsFormsAlura.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>Frm_Principal.ico</ApplicationIcon>
+    <ApplicationIcon>Imagens\Frm_Principal.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -52,22 +52,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form_DemonstracaoKey.cs">
+    <Compile Include="Formulários Curso 1\Form_DemonstracaoKey.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_DemonstracaoKey.Designer.cs">
+    <Compile Include="Formulários Curso 1\Form_DemonstracaoKey.Designer.cs">
       <DependentUpon>Form_DemonstracaoKey.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_HelloWorld.cs">
+    <Compile Include="Formulários Curso 1\Form_HelloWorld.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_HelloWorld.Designer.cs">
+    <Compile Include="Formulários Curso 1\Form_HelloWorld.Designer.cs">
       <DependentUpon>Form_HelloWorld.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Mascara.cs">
+    <Compile Include="Formulários Curso 1\Form_Mascara.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Mascara.Designer.cs">
+    <Compile Include="Formulários Curso 1\Form_Mascara.Designer.cs">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Principal.cs">
@@ -76,46 +76,55 @@
     <Compile Include="Form_Principal.Designer.cs">
       <DependentUpon>Form_Principal.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ValidaCPF.cs">
+    <Compile Include="Formulários Curso 1\Form_ValidaCPF.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ValidaCPF.Designer.cs">
+    <Compile Include="Formulários Curso 1\Form_ValidaCPF.Designer.cs">
       <DependentUpon>Form_ValidaCPF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ValidaCPF2.cs">
+    <Compile Include="Formulários Curso 1\Form_ValidaCPF2.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ValidaCPF2.Designer.cs">
+    <Compile Include="Formulários Curso 1\Form_ValidaCPF2.Designer.cs">
       <DependentUpon>Form_ValidaCPF2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ValidaSenha.cs">
+    <Compile Include="Formulários Curso 1\Form_ValidaSenha.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_ValidaSenha.Designer.cs">
+    <Compile Include="Formulários Curso 1\Form_ValidaSenha.Designer.cs">
       <DependentUpon>Form_ValidaSenha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Principal_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Principal_Menu.Designer.cs">
+      <DependentUpon>Form_Principal_Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form_DemonstracaoKey.resx">
+    <EmbeddedResource Include="Formulários Curso 1\Form_DemonstracaoKey.resx">
       <DependentUpon>Form_DemonstracaoKey.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_HelloWorld.resx">
+    <EmbeddedResource Include="Formulários Curso 1\Form_HelloWorld.resx">
       <DependentUpon>Form_HelloWorld.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Mascara.resx">
+    <EmbeddedResource Include="Formulários Curso 1\Form_Mascara.resx">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Principal.resx">
       <DependentUpon>Form_Principal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ValidaCPF.resx">
+    <EmbeddedResource Include="Formulários Curso 1\Form_ValidaCPF.resx">
       <DependentUpon>Form_ValidaCPF.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ValidaCPF2.resx">
+    <EmbeddedResource Include="Formulários Curso 1\Form_ValidaCPF2.resx">
       <DependentUpon>Form_ValidaCPF2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ValidaSenha.resx">
+    <EmbeddedResource Include="Formulários Curso 1\Form_ValidaSenha.resx">
       <DependentUpon>Form_ValidaSenha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Principal_Menu.resx">
+      <DependentUpon>Form_Principal_Menu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,6 +134,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -140,7 +150,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Frm_Principal.ico" />
+    <Content Include="Imagens\Frm_DemonstracaoKey.ico" />
+    <Content Include="Imagens\Frm_DemonstracaoKey.png" />
+    <Content Include="Imagens\Frm_HelloWorld.ico" />
+    <Content Include="Imagens\Frm_HelloWorld.png" />
+    <Content Include="Imagens\Frm_Mascara.ico" />
+    <Content Include="Imagens\Frm_Mascara.png" />
+    <Content Include="Imagens\Frm_Principal.ico" />
+    <Content Include="Imagens\Frm_ValidaCPF.ico" />
+    <Content Include="Imagens\Frm_ValidaCPF.png" />
+    <Content Include="Imagens\Frm_ValidaCPF2.ico" />
+    <Content Include="Imagens\Frm_ValidaCPF2.png" />
+    <Content Include="Imagens\Frm_ValidaSenha.ico" />
+    <Content Include="Imagens\Frm_ValidaSenha.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CursoWindowsFormsBiblioteca\CursoWindowsFormsBiblioteca.csproj">

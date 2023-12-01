@@ -22,7 +22,8 @@ namespace WindowsFormsAlura
             //Application.Run(new Form_Mascara());
             //Application.Run(new Form_ValidaCPF());
             //Application.Run(new Form_ValidaCPF2());
-            Application.Run(new Form_Principal());
+            // Application.Run(new Form_Principal());
+            Application.Run(new Form_Principal_Menu());
 
         }
     }
