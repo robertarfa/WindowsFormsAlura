@@ -84,6 +84,7 @@
             this.demonstraçãoKeyToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.K)));
             this.demonstraçãoKeyToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.demonstraçãoKeyToolStripMenuItem.Text = "Demonstração &Key";
+            this.demonstraçãoKeyToolStripMenuItem.Click += new System.EventHandler(this.demonstraçãoKeyToolStripMenuItem_Click);
             // 
             // helloWorldToolStripMenuItem
             // 
@@ -92,6 +93,7 @@
             this.helloWorldToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
             this.helloWorldToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.helloWorldToolStripMenuItem.Text = "Hello &World";
+            this.helloWorldToolStripMenuItem.Click += new System.EventHandler(this.helloWorldToolStripMenuItem_Click);
             // 
             // máscaraToolStripMenuItem
             // 
@@ -100,6 +102,7 @@
             this.máscaraToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.M)));
             this.máscaraToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.máscaraToolStripMenuItem.Text = "&Máscara";
+            this.máscaraToolStripMenuItem.Click += new System.EventHandler(this.máscaraToolStripMenuItem_Click);
             // 
             // validaCPFToolStripMenuItem
             // 
@@ -108,6 +111,7 @@
             this.validaCPFToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
             this.validaCPFToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.validaCPFToolStripMenuItem.Text = "Valida &CPF";
+            this.validaCPFToolStripMenuItem.Click += new System.EventHandler(this.validaCPFToolStripMenuItem_Click);
             // 
             // válidaCPF2ToolStripMenuItem
             // 
@@ -116,6 +120,7 @@
             this.válidaCPF2ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.P)));
             this.válidaCPF2ToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.válidaCPF2ToolStripMenuItem.Text = "Valida C&PF 2";
+            this.válidaCPF2ToolStripMenuItem.Click += new System.EventHandler(this.válidaCPF2ToolStripMenuItem_Click);
             // 
             // validaSenhaToolStripMenuItem
             // 
@@ -124,12 +129,14 @@
             this.validaSenhaToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.S)));
             this.validaSenhaToolStripMenuItem.Size = new System.Drawing.Size(264, 26);
             this.validaSenhaToolStripMenuItem.Text = "Valida &Senha";
+            this.validaSenhaToolStripMenuItem.Click += new System.EventHandler(this.validaSenhaToolStripMenuItem_Click);
             // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
             this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
             // windowsToolStripMenuItem
             // 
