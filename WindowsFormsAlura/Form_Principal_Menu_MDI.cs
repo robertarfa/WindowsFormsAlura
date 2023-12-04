@@ -39,6 +39,7 @@ namespace WindowsFormsAlura
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Form_Mascara f = new Form_Mascara();
 
             f.MdiParent = this;
             // f.ShowDialog();
@@ -79,6 +80,23 @@ namespace WindowsFormsAlura
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void cascataToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
+        }
+
+        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal);
+
+        }
+
+        private void verticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileVertical);
+
         }
     }
 }
