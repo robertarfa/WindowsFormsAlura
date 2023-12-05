@@ -28,6 +28,14 @@ namespace WindowsFormsAlura
             label_Titulo.Text = txt_ConteudoLabel.Text;
         }
 
+        private void txt_ConteudoLabel_TextChanged(object sender, EventArgs e)
+        {
 
+        }
+
+        private void label_Titulo_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

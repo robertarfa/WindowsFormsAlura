@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsAlura
 {
-    partial class Form_Principal_Menu
+    partial class Form_Principal_Menu_UserControl
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Principal_Menu));
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Principal_Menu_UserControl));
             this.Menu_principal = new System.Windows.Forms.MenuStrip();
             this.arquivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,6 +41,9 @@
             this.validaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Tbc_Application = new System.Windows.Forms.TabControl();
+            this.imageList_Imagens = new System.Windows.Forms.ImageList(this.components);
+            this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,6 +63,7 @@
             // 
             this.arquivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.novoToolStripMenuItem,
+            this.apagarAbaToolStripMenuItem,
             this.sairToolStripMenuItem});
             this.arquivoToolStripMenuItem.Name = "arquivoToolStripMenuItem";
             this.arquivoToolStripMenuItem.Size = new System.Drawing.Size(75, 24);
@@ -74,7 +79,7 @@
             this.válidaCPF2ToolStripMenuItem,
             this.validaSenhaToolStripMenuItem});
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.novoToolStripMenuItem.Text = "Novo";
             // 
             // demonstraçãoKeyToolStripMenuItem
@@ -134,7 +139,7 @@
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
-            this.sairToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.sairToolStripMenuItem.Text = "Sair";
             this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
             // 
@@ -144,18 +149,45 @@
             this.windowsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.windowsToolStripMenuItem.Text = "Windows";
             // 
-            // Form_Principal_Menu
+            // Tbc_Application
+            // 
+            this.Tbc_Application.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Tbc_Application.ImageList = this.imageList_Imagens;
+            this.Tbc_Application.Location = new System.Drawing.Point(0, 28);
+            this.Tbc_Application.Name = "Tbc_Application";
+            this.Tbc_Application.SelectedIndex = 0;
+            this.Tbc_Application.Size = new System.Drawing.Size(800, 422);
+            this.Tbc_Application.TabIndex = 1;
+            // 
+            // imageList_Imagens
+            // 
+            this.imageList_Imagens.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList_Imagens.ImageStream")));
+            this.imageList_Imagens.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList_Imagens.Images.SetKeyName(0, "Frm_DemonstracaoKey.png");
+            this.imageList_Imagens.Images.SetKeyName(1, "Frm_HelloWorld.png");
+            this.imageList_Imagens.Images.SetKeyName(2, "Frm_Mascara.png");
+            this.imageList_Imagens.Images.SetKeyName(3, "Frm_ValidaCPF.png");
+            this.imageList_Imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
+            this.imageList_Imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
+            // 
+            // apagarAbaToolStripMenuItem
+            // 
+            this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
+            this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
+            // 
+            // Form_Principal_Menu_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Tbc_Application);
             this.Controls.Add(this.Menu_principal);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.Menu_principal;
-            this.Name = "Form_Principal_Menu";
+            this.Name = "Form_Principal_Menu_UserControl";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
-            //  this.Load += new System.EventHandler(this.Form_Principal_Menu_Load);
             this.Menu_principal.ResumeLayout(false);
             this.Menu_principal.PerformLayout();
             this.ResumeLayout(false);
@@ -176,5 +208,8 @@
         private System.Windows.Forms.ToolStripMenuItem validaSenhaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem windowsToolStripMenuItem;
+        private System.Windows.Forms.TabControl Tbc_Application;
+        private System.Windows.Forms.ImageList imageList_Imagens;
+        private System.Windows.Forms.ToolStripMenuItem apagarAbaToolStripMenuItem;
     }
 }

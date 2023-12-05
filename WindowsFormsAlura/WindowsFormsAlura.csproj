@@ -70,6 +70,12 @@
     <Compile Include="Formulários Curso 1\Form_Mascara.Designer.cs">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_HelloWorld_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_HelloWorld_UC.Designer.cs">
+      <DependentUpon>Form_HelloWorld_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +112,12 @@
     <Compile Include="Form_Principal_Menu_MDI.Designer.cs">
       <DependentUpon>Form_Principal_Menu_MDI.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Principal_Menu_UserControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Principal_Menu_UserControl.Designer.cs">
+      <DependentUpon>Form_Principal_Menu_UserControl.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários Curso 1\Form_DemonstracaoKey.resx">
@@ -116,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários Curso 1\Form_Mascara.resx">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_HelloWorld_UC.resx">
+      <DependentUpon>Form_HelloWorld_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Principal.resx">
       <DependentUpon>Form_Principal.cs</DependentUpon>
@@ -134,6 +149,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Principal_Menu_MDI.resx">
       <DependentUpon>Form_Principal_Menu_MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Principal_Menu_UserControl.resx">
+      <DependentUpon>Form_Principal_Menu_UserControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

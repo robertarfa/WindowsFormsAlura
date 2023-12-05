@@ -10,9 +10,12 @@ using System.Windows.Forms;
 
 namespace WindowsFormsAlura
 {
-    public partial class Form_Principal_Menu : Form
+    public partial class Form_Principal_Menu_UserControl : Form
     {
-        public Form_Principal_Menu()
+
+        int ControlHelloWorld = 0;
+
+        public Form_Principal_Menu_UserControl()
         {
             InitializeComponent();
         }
@@ -26,9 +29,27 @@ namespace WindowsFormsAlura
 
         private void helloWorldToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form_HelloWorld f = new Form_HelloWorld();
 
-            f.ShowDialog();
+            ControlHelloWorld += 1;
+
+            Form_HelloWorld_UC u = new Form_HelloWorld_UC();
+
+            TabPage tb = new TabPage();
+
+            //Nome do componente
+            tb.Name = "Hello World " + ControlHelloWorld;
+
+            //Nome que vai aparecer na tab
+            tb.Text = "Hello World " + ControlHelloWorld;
+
+            //Adiciona o ícone na aba
+            tb.ImageIndex = 1;
+
+            //Componentes que estarão dentro da tabPage
+            tb.Controls.Add(u);
+
+            //Adiciona o componente na página
+            Tbc_Application.TabPages.Add(tb);
         }
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,5 +87,18 @@ namespace WindowsFormsAlura
             Application.Exit();
         }
 
+        private void apagarAbaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+                Tbc_Application.TabPages.Remove(Tbc_Application.SelectedTab);
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
