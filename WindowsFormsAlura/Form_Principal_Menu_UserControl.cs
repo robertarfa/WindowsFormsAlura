@@ -14,6 +14,7 @@ namespace WindowsFormsAlura
     {
 
         int ControlHelloWorld = 0;
+        int ControlValidaCPF2 = 0;
 
         public Form_Principal_Menu_UserControl()
         {
@@ -69,9 +70,24 @@ namespace WindowsFormsAlura
         private void válidaCPF2ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-            Form_ValidaCPF2 f = new Form_ValidaCPF2();
+            //  Form_ValidaCPF2 f = new Form_ValidaCPF2();
 
-            f.ShowDialog();
+            //f.ShowDialog();
+
+            ControlValidaCPF2 += 1;
+
+            Form_ValidaCPF2_UC f = new Form_ValidaCPF2_UC();
+
+            TabPage tb = new TabPage();
+
+            tb.Text = "Valida CPF2 " + ControlValidaCPF2;
+            tb.Name = "Valida CPF2 " + ControlValidaCPF2;
+
+            tb.ImageIndex = 4;
+
+            tb.Controls.Add(f);
+
+            Tbc_Application.TabPages.Add(tb);
 
         }
 

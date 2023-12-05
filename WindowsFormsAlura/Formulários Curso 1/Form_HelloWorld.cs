@@ -19,7 +19,9 @@ namespace WindowsFormsAlura
 
         private void Btn_Sair_Click(object sender, EventArgs e)
         {
-            //Application.Exit();
+            //Altera o resultado da msg quando clica no botão
+            //  DialogResult = DialogResult.Abort;
+
             this.Close();
         }
 

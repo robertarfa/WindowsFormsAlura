@@ -118,6 +118,18 @@
     <Compile Include="Form_Principal_Menu_UserControl.Designer.cs">
       <DependentUpon>Form_Principal_Menu_UserControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Questao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Questao.Designer.cs">
+      <DependentUpon>Form_Questao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_ValidaCPF2_UC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Form_ValidaCPF2_UC.Designer.cs">
+      <DependentUpon>Form_ValidaCPF2_UC.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Formulários Curso 1\Form_DemonstracaoKey.resx">
@@ -153,20 +165,26 @@
     <EmbeddedResource Include="Form_Principal_Menu_UserControl.resx">
       <DependentUpon>Form_Principal_Menu_UserControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Questao.resx">
+      <DependentUpon>Form_Questao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_ValidaCPF2_UC.resx">
+      <DependentUpon>Form_ValidaCPF2_UC.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -190,6 +208,8 @@
     <Content Include="Imagens\Frm_ValidaCPF2.png" />
     <Content Include="Imagens\Frm_ValidaSenha.ico" />
     <Content Include="Imagens\Frm_ValidaSenha.png" />
+    <Content Include="Imagens\Question.ico" />
+    <Content Include="Imagens\Question.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CursoWindowsFormsBiblioteca\CursoWindowsFormsBiblioteca.csproj">

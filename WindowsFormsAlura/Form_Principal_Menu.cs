@@ -29,6 +29,10 @@ namespace WindowsFormsAlura
             Form_HelloWorld f = new Form_HelloWorld();
 
             f.ShowDialog();
+
+            //  string resultado = f.DialogResult.ToString();
+
+            //MessageBox.Show(resultado);
         }
 
         private void máscaraToolStripMenuItem_Click(object sender, EventArgs e)
