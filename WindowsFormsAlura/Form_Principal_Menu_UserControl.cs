@@ -15,6 +15,7 @@ namespace WindowsFormsAlura
 
         int ControlHelloWorld = 0;
         int ControlValidaCPF2 = 0;
+        int ControleArquivoImagem = 0;
 
         public Form_Principal_Menu_UserControl()
         {
@@ -115,6 +116,43 @@ namespace WindowsFormsAlura
             {
                 MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void abrirImagemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Para abrir um arquivo
+            OpenFileDialog db = new OpenFileDialog();
+            db.InitialDirectory = "C:\\Users\\rober\\OneDrive\\CURSOS\\IOT\\POC\\WindowsFormsAlura\\WindowsFormsAlura\\Imagens";
+            db.Filter = "PNG|*.PNG";
+            db.Title = "Escolha a Imagem";
+
+            if (db.ShowDialog() == DialogResult.OK)
+            {
+                string nomeArquivoImagem = db.FileName;
+
+                ControleArquivoImagem += 1;
+
+                Form_ArquivoImage_UC u = new Form_ArquivoImage_UC(nomeArquivoImagem);
+
+                TabPage tb = new TabPage();
+
+                //Nome do componente
+                tb.Name = "Arquivo Imagem " + ControleArquivoImagem;
+
+                //Nome que vai aparecer na tab
+                tb.Text = "Arquivo Imagem " + ControleArquivoImagem;
+
+                //Adiciona o ícone na aba
+                tb.ImageIndex = 6;
+
+                //Componentes que estarão dentro da tabPage
+                tb.Controls.Add(u);
+
+                //Adiciona o componente na página
+                Tbc_Application.TabPages.Add(tb);
+            }
+
+
         }
     }
 }

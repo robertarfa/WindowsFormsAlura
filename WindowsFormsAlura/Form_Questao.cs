@@ -12,9 +12,14 @@ namespace WindowsFormsAlura
 {
     public partial class Form_Questao : Form
     {
-        public Form_Questao()
+        public Form_Questao(string nomeImagem, string mensagem)
         {
             InitializeComponent();
+
+            Image MyImage = (Image)global::WindowsFormsAlura.Properties.Resources.ResourceManager.GetObject(nomeImagem);
+            Pic_imagem.Image = MyImage;
+
+            Label_Questao.Text = mensagem;
         }
 
         private void Btn_OK_Click(object sender, EventArgs e)

@@ -42,7 +42,7 @@ namespace WindowsFormsAlura
             else
             {
 
-                Form_Questao db = new Form_Questao();
+                Form_Questao db = new Form_Questao("Frm_ValidaCPF2", "Quer mesmo validar?");
 
                 db.ShowDialog();
 

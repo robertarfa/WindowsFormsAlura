@@ -39,11 +39,13 @@
             this.validaCPFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.válidaCPF2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.validaSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.windowsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.Tbc_Application = new System.Windows.Forms.TabControl();
             this.imageList_Imagens = new System.Windows.Forms.ImageList(this.components);
-            this.apagarAbaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirImagemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu_principal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,6 +54,7 @@
             this.Menu_principal.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.Menu_principal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.arquivoToolStripMenuItem,
+            this.toolStripMenuItem1,
             this.windowsToolStripMenuItem});
             this.Menu_principal.Location = new System.Drawing.Point(0, 0);
             this.Menu_principal.Name = "Menu_principal";
@@ -136,6 +139,13 @@
             this.validaSenhaToolStripMenuItem.Text = "Valida &Senha";
             this.validaSenhaToolStripMenuItem.Click += new System.EventHandler(this.validaSenhaToolStripMenuItem_Click);
             // 
+            // apagarAbaToolStripMenuItem
+            // 
+            this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
+            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
+            this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
+            // 
             // sairToolStripMenuItem
             // 
             this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
@@ -148,6 +158,14 @@
             this.windowsToolStripMenuItem.Name = "windowsToolStripMenuItem";
             this.windowsToolStripMenuItem.Size = new System.Drawing.Size(84, 24);
             this.windowsToolStripMenuItem.Text = "Windows";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.abrirImagemToolStripMenuItem});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(63, 24);
+            this.toolStripMenuItem1.Text = "Ações";
             // 
             // Tbc_Application
             // 
@@ -169,13 +187,14 @@
             this.imageList_Imagens.Images.SetKeyName(3, "Frm_ValidaCPF.png");
             this.imageList_Imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
             this.imageList_Imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
+            this.imageList_Imagens.Images.SetKeyName(6, "folder.png");
             // 
-            // apagarAbaToolStripMenuItem
+            // abrirImagemToolStripMenuItem
             // 
-            this.apagarAbaToolStripMenuItem.Name = "apagarAbaToolStripMenuItem";
-            this.apagarAbaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.apagarAbaToolStripMenuItem.Text = "Apagar Aba";
-            this.apagarAbaToolStripMenuItem.Click += new System.EventHandler(this.apagarAbaToolStripMenuItem_Click);
+            this.abrirImagemToolStripMenuItem.Name = "abrirImagemToolStripMenuItem";
+            this.abrirImagemToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.abrirImagemToolStripMenuItem.Text = "Abrir Imagem";
+            this.abrirImagemToolStripMenuItem.Click += new System.EventHandler(this.abrirImagemToolStripMenuItem_Click);
             // 
             // Form_Principal_Menu_UserControl
             // 
@@ -211,5 +230,7 @@
         private System.Windows.Forms.TabControl Tbc_Application;
         private System.Windows.Forms.ImageList imageList_Imagens;
         private System.Windows.Forms.ToolStripMenuItem apagarAbaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem abrirImagemToolStripMenuItem;
     }
 }
