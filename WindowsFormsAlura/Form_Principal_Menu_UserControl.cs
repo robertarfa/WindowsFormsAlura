@@ -154,5 +154,12 @@ namespace WindowsFormsAlura
 
 
         }
+
+        private void conectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_Login f = new Form_Login();
+
+            f.ShowDialog();
+        }
     }
 }

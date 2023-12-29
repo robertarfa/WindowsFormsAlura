@@ -82,6 +82,12 @@
     <Compile Include="Form_HelloWorld_UC.Designer.cs">
       <DependentUpon>Form_HelloWorld_UC.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -153,6 +159,9 @@
     <EmbeddedResource Include="Form_HelloWorld_UC.resx">
       <DependentUpon>Form_HelloWorld_UC.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form_Principal.resx">
       <DependentUpon>Form_Principal.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +226,7 @@
     <Content Include="Imagens\Frm_ValidaCPF2.png" />
     <Content Include="Imagens\Frm_ValidaSenha.ico" />
     <Content Include="Imagens\Frm_ValidaSenha.png" />
+    <None Include="Imagens\key.png" />
     <Content Include="Imagens\Question.ico" />
     <Content Include="Imagens\Question.png" />
   </ItemGroup>
