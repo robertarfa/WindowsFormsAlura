@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CursoWindowsFormsBiblioteca;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,11 @@ namespace WindowsFormsAlura
         public Form_Principal_Menu_UserControl()
         {
             InitializeComponent();
+
+            novoToolStripMenuItem.Enabled = false;
+            apagarAbaToolStripMenuItem.Enabled = false;
+            abrirImagemToolStripMenuItem.Enabled = false;
+            desconectarToolStripMenuItem.Enabled = false;
         }
 
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -160,6 +166,60 @@ namespace WindowsFormsAlura
             Form_Login f = new Form_Login();
 
             f.ShowDialog();
+
+            if (f.DialogResult == DialogResult.OK)
+            {
+                string senha = f.senha;
+                string login = f.login;
+
+                if (CursoWindowsFormsBiblioteca.Cls_Uteis.ValidaSenhaLogin(senha) == true)
+                {
+
+                    novoToolStripMenuItem.Enabled = true;
+                    apagarAbaToolStripMenuItem.Enabled = true;
+                    abrirImagemToolStripMenuItem.Enabled = true;
+                    desconectarToolStripMenuItem.Enabled = true;
+                    conectarToolStripMenuItem.Enabled = false;
+
+                    MessageBox.Show("Bem vindo " + login + " !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Senha inválida!", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                }
+            }
+        }
+
+        private void desconectarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            Form_Questao db = new Form_Questao("Question1", "Deseja desconectar?");
+
+            db.ShowDialog();
+
+            var question = db.DialogResult;
+
+
+            if (question == DialogResult.Yes)
+            {
+
+                //Tbc_Application.TabPages.Remove(Tbc_Application.SelectedTab);
+
+                //Sempre que for Collection, precisa fechar de trás pra frente
+                for (int i = Tbc_Application.TabPages.Count - 1; i >= 0; i += -1)
+                {
+                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                }
+
+                novoToolStripMenuItem.Enabled = false;
+                apagarAbaToolStripMenuItem.Enabled = false;
+                abrirImagemToolStripMenuItem.Enabled = false;
+                desconectarToolStripMenuItem.Enabled = false;
+                conectarToolStripMenuItem.Enabled = true;
+            }
+
+
         }
     }
 }
