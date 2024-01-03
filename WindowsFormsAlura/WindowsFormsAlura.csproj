@@ -70,22 +70,22 @@
     <Compile Include="Formulários Curso 1\Form_Mascara.Designer.cs">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ArquivoImage_UC.cs">
+    <Compile Include="Formulários Curso 2\Form_ArquivoImage_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form_ArquivoImage_UC.Designer.cs">
+    <Compile Include="Formulários Curso 2\Form_ArquivoImage_UC.Designer.cs">
       <DependentUpon>Form_ArquivoImage_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_HelloWorld_UC.cs">
+    <Compile Include="Formulários Curso 2\Form_HelloWorld_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form_HelloWorld_UC.Designer.cs">
+    <Compile Include="Formulários Curso 2\Form_HelloWorld_UC.Designer.cs">
       <DependentUpon>Form_HelloWorld_UC.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Login.cs">
+    <Compile Include="Formulários Curso 2\Form_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Login.Designer.cs">
+    <Compile Include="Formulários Curso 2\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Form_Principal.cs">
@@ -130,16 +130,16 @@
     <Compile Include="Form_Principal_Menu_UserControl.Designer.cs">
       <DependentUpon>Form_Principal_Menu_UserControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_Questao.cs">
+    <Compile Include="Formulários Curso 2\Form_Questao.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Questao.Designer.cs">
+    <Compile Include="Formulários Curso 2\Form_Questao.Designer.cs">
       <DependentUpon>Form_Questao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form_ValidaCPF2_UC.cs">
+    <Compile Include="Formulários Curso 2\Form_ValidaCPF2_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form_ValidaCPF2_UC.Designer.cs">
+    <Compile Include="Formulários Curso 2\Form_ValidaCPF2_UC.Designer.cs">
       <DependentUpon>Form_ValidaCPF2_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -153,13 +153,13 @@
     <EmbeddedResource Include="Formulários Curso 1\Form_Mascara.resx">
       <DependentUpon>Form_Mascara.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ArquivoImage_UC.resx">
+    <EmbeddedResource Include="Formulários Curso 2\Form_ArquivoImage_UC.resx">
       <DependentUpon>Form_ArquivoImage_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_HelloWorld_UC.resx">
+    <EmbeddedResource Include="Formulários Curso 2\Form_HelloWorld_UC.resx">
       <DependentUpon>Form_HelloWorld_UC.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Login.resx">
+    <EmbeddedResource Include="Formulários Curso 2\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Principal.resx">
@@ -183,10 +183,10 @@
     <EmbeddedResource Include="Form_Principal_Menu_UserControl.resx">
       <DependentUpon>Form_Principal_Menu_UserControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_Questao.resx">
+    <EmbeddedResource Include="Formulários Curso 2\Form_Questao.resx">
       <DependentUpon>Form_Questao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form_ValidaCPF2_UC.resx">
+    <EmbeddedResource Include="Formulários Curso 2\Form_ValidaCPF2_UC.resx">
       <DependentUpon>Form_ValidaCPF2_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
