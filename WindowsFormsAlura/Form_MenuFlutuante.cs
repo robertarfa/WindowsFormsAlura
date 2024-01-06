@@ -29,11 +29,11 @@ namespace WindowsFormsAlura
 
                 var contextMenu = new ContextMenuStrip();
 
-                var menu1 = DesenhaItemMenu("Item do Menu 1");
-                var menu2 = DesenhaItemMenu("Item do Menu 2");
+                var menu1 = DesenhaItemMenu("Item do Menu 1", "key");
+                var menu2 = DesenhaItemMenu("Item do Menu 2", "key");
 
-                var subMenu1 = DesenhaItemMenu("SubMenu 1");
-                var subMenu2 = DesenhaItemMenu("SubMenu 2");
+                var subMenu1 = DesenhaItemMenu("SubMenu 1", "key");
+                var subMenu2 = DesenhaItemMenu("SubMenu 2", "key");
 
                 contextMenu.Items.Add(menu1);
                 contextMenu.Items.Add(menu2);
@@ -44,19 +44,36 @@ namespace WindowsFormsAlura
 
                 contextMenu.Show(this, new Point(posicaoX, posicaoY));
 
+                menu1.Click += new System.EventHandler(menu1_Click);
+                menu2.Click += new System.EventHandler(menu2_Click);
 
                 //MessageBox.Show(e.Button.ToString() + " posicaoX: " + posicaoX + " posicaoY: " + posicaoY);
             }
 
-            ToolStripMenuItem DesenhaItemMenu(string text)
+            ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
             {
-                var vToolTip = new ToolStripMenuItem();
+                Image MyImage = (Image)global::WindowsFormsAlura.Properties.Resources.ResourceManager.GetObject(nomeImagem);
+                ;
+                var vToolTip = new ToolStripMenuItem
+                {
+                    Text = text,
+                    Image = MyImage
+                };
 
-                vToolTip.Text = text;
+
 
                 return vToolTip;
             }
 
+            void menu1_Click(object sender1, EventArgs e1)
+            {
+                MessageBox.Show("Menu 1");
+            }
+
+            void menu2_Click(object sender2, EventArgs e1)
+            {
+                MessageBox.Show("Menu 2");
+            }
         }
 
 
