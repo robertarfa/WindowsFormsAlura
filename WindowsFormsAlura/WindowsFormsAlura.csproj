@@ -88,6 +88,24 @@
     <Compile Include="Formulários Curso 2\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_MouseCursor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MouseCursor.Designer.cs">
+      <DependentUpon>Form_MouseCursor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MouseEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MouseEventos.Designer.cs">
+      <DependentUpon>Form_MouseEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_MouseCaptura.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_MouseCaptura.Designer.cs">
+      <DependentUpon>Form_MouseCaptura.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_Principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +179,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formulários Curso 2\Form_Login.resx">
       <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MouseCaptura.resx">
+      <DependentUpon>Form_MouseCaptura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MouseCursor.resx">
+      <DependentUpon>Form_MouseCursor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_MouseEventos.resx">
+      <DependentUpon>Form_MouseEventos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form_Principal.resx">
       <DependentUpon>Form_Principal.cs</DependentUpon>
