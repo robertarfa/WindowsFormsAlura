@@ -25,7 +25,9 @@ namespace WindowsFormsAlura
             // Application.Run(new Form_Principal());
             // Application.Run(new Form_Principal_Menu());
             // Application.Run(new Form_Principal_Menu_MDI()); //Multiple documents interface
+
             Application.Run(new Form_MenuFlutuante()); //Multiple documents interface
+
 
         }
     }
