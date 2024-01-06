@@ -24,7 +24,10 @@ namespace WindowsFormsAlura
             if (e.Button == MouseButtons.Right)
             {
 
-                MessageBox.Show(e.Button.ToString());
+                var posicaoX = e.X;
+                var posicaoY = e.Y;
+
+                MessageBox.Show(e.Button.ToString() + " posicaoX: " + posicaoX + " posicaoY: " + posicaoY);
             }
 
         }
