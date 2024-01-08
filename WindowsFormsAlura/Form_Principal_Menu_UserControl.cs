@@ -221,5 +221,86 @@ namespace WindowsFormsAlura
 
 
         }
+
+        private void Tbc_Application_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+
+                var posicaoX = e.X;
+                var posicaoY = e.Y;
+
+                var contextMenu = new ContextMenuStrip();
+
+                var menu1 = DesenhaItemMenu("Apagar a aba", "DeleteTab");
+                var menu2 = DesenhaItemMenu("Apagar todas as esquerda", "DeleteLeft");
+                var menu3 = DesenhaItemMenu("Apagar todas as direita", "DeleteRight");
+                var menu4 = DesenhaItemMenu("Apagar todas menos esta", "DeleteAll");
+
+
+                contextMenu.Items.Add(menu1);
+                contextMenu.Items.Add(menu2);
+                contextMenu.Items.Add(menu3);
+                contextMenu.Items.Add(menu4);
+
+
+
+                contextMenu.Show(this, new Point(posicaoX, posicaoY));
+
+                menu1.Click += new System.EventHandler(ApagarAba_Click);
+                menu2.Click += new System.EventHandler(Menu2_Click);
+                menu3.Click += new System.EventHandler(Menu3_Click);
+                menu4.Click += new System.EventHandler(Menu4_Click);
+
+
+
+                //MessageBox.Show(e.Button.ToString() + " posicaoX: " + posicaoX + " posicaoY: " + posicaoY);
+            }
+
+
+        }
+
+        ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
+        {
+            Image MyImage = (Image)global::WindowsFormsAlura.Properties.Resources.ResourceManager.GetObject(nomeImagem);
+            ;
+            var vToolTip = new ToolStripMenuItem
+            {
+                Text = text,
+                Image = MyImage
+            };
+
+
+
+            return vToolTip;
+        }
+
+        void ApagarAba_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+                Tbc_Application.TabPages.Remove(Tbc_Application.SelectedTab);
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void Menu2_Click(object sender2, EventArgs e1)
+        {
+            MessageBox.Show("Menu 2");
+        }
+
+        void Menu3_Click(object sender2, EventArgs e1)
+        {
+            MessageBox.Show("Menu 3");
+        }
+
+        void Menu4_Click(object sender2, EventArgs e1)
+        {
+            MessageBox.Show("Menu 4");
+        }
     }
 }

@@ -88,13 +88,12 @@
     <Compile Include="Formulários Curso 2\Form_Login.Designer.cs">
       <DependentUpon>Form_Login.cs</DependentUpon>
     </Compile>
-
     <Compile Include="Form_MenuFlutuante.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_MenuFlutuante.Designer.cs">
       <DependentUpon>Form_MenuFlutuante.cs</DependentUpon>
-   </Compile>
+    </Compile>
     <Compile Include="Form_MouseCursor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -250,6 +249,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Imagens\DeleteAll.png" />
+    <Content Include="Imagens\DeleteLeft.png" />
+    <Content Include="Imagens\DeleteRight.png" />
+    <Content Include="Imagens\DeleteTab.png" />
     <Content Include="Imagens\Frm_DemonstracaoKey.ico" />
     <Content Include="Imagens\Frm_DemonstracaoKey.png" />
     <Content Include="Imagens\Frm_HelloWorld.ico" />
