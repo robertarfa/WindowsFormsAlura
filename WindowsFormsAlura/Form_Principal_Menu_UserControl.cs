@@ -248,9 +248,9 @@ namespace WindowsFormsAlura
                 contextMenu.Show(this, new Point(posicaoX, posicaoY));
 
                 menu1.Click += new System.EventHandler(ApagarAba_Click);
-                menu2.Click += new System.EventHandler(Menu2_Click);
-                menu3.Click += new System.EventHandler(Menu3_Click);
-                menu4.Click += new System.EventHandler(Menu4_Click);
+                menu2.Click += new System.EventHandler(ApagarTodasEsquerda_Click);
+                menu3.Click += new System.EventHandler(ApagarTodasDireita_Click);
+                menu4.Click += new System.EventHandler(ApagarTodasMenosEsta_Click);
 
 
 
@@ -288,19 +288,87 @@ namespace WindowsFormsAlura
             }
         }
 
-        void Menu2_Click(object sender2, EventArgs e1)
+        void ApagarTodasEsquerda_Click(object sender2, EventArgs e1)
         {
-            MessageBox.Show("Menu 2");
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+                var itemSelecionado = Tbc_Application.SelectedIndex;
+
+                ApagaEsqueda(itemSelecionado);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        void Menu3_Click(object sender2, EventArgs e1)
+        void ApagarTodasDireita_Click(object sender2, EventArgs e1)
         {
-            MessageBox.Show("Menu 3");
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+                var itemSelecionado = Tbc_Application.SelectedIndex;
+
+                ApagaDireita(itemSelecionado);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        void Menu4_Click(object sender2, EventArgs e1)
+        void ApagarTodasMenosEsta_Click(object sender2, EventArgs e1)
         {
-            MessageBox.Show("Menu 4");
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+                var itemSelecionado = Tbc_Application.SelectedIndex;
+
+                ApagaDireita(itemSelecionado);
+                ApagaEsqueda(itemSelecionado);
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void ApagaDireita(int itemSelecionado)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+
+                for (var i = Tbc_Application.TabCount - 1; i > itemSelecionado; i += -1)
+                {
+                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                }
+
+
+
+            }
+        }
+
+        void ApagaEsqueda(int itemSelecionado)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+
+                for (var i = itemSelecionado - 1; i >= 0; i += -1)
+                {
+                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                }
+
+
+
+            }
         }
     }
 }
