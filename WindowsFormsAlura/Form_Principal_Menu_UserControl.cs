@@ -221,5 +221,154 @@ namespace WindowsFormsAlura
 
 
         }
+
+        private void Tbc_Application_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+
+                var posicaoX = e.X;
+                var posicaoY = e.Y;
+
+                var contextMenu = new ContextMenuStrip();
+
+                var menu1 = DesenhaItemMenu("Apagar a aba", "DeleteTab");
+                var menu2 = DesenhaItemMenu("Apagar todas as esquerda", "DeleteLeft");
+                var menu3 = DesenhaItemMenu("Apagar todas as direita", "DeleteRight");
+                var menu4 = DesenhaItemMenu("Apagar todas menos esta", "DeleteAll");
+
+
+                contextMenu.Items.Add(menu1);
+                contextMenu.Items.Add(menu2);
+                contextMenu.Items.Add(menu3);
+                contextMenu.Items.Add(menu4);
+
+
+
+                contextMenu.Show(this, new Point(posicaoX, posicaoY));
+
+                menu1.Click += new System.EventHandler(ApagarAba_Click);
+                menu2.Click += new System.EventHandler(ApagarTodasEsquerda_Click);
+                menu3.Click += new System.EventHandler(ApagarTodasDireita_Click);
+                menu4.Click += new System.EventHandler(ApagarTodasMenosEsta_Click);
+
+
+
+                //MessageBox.Show(e.Button.ToString() + " posicaoX: " + posicaoX + " posicaoY: " + posicaoY);
+            }
+
+
+        }
+
+        ToolStripMenuItem DesenhaItemMenu(string text, string nomeImagem)
+        {
+            Image MyImage = (Image)global::WindowsFormsAlura.Properties.Resources.ResourceManager.GetObject(nomeImagem);
+            ;
+            var vToolTip = new ToolStripMenuItem
+            {
+                Text = text,
+                Image = MyImage
+            };
+
+
+
+            return vToolTip;
+        }
+
+        void ApagarAba_Click(object sender1, EventArgs e1)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+                Tbc_Application.TabPages.Remove(Tbc_Application.SelectedTab);
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void ApagarTodasEsquerda_Click(object sender2, EventArgs e1)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+                var itemSelecionado = Tbc_Application.SelectedIndex;
+
+                ApagaEsqueda(itemSelecionado);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void ApagarTodasDireita_Click(object sender2, EventArgs e1)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+                var itemSelecionado = Tbc_Application.SelectedIndex;
+
+                ApagaDireita(itemSelecionado);
+
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void ApagarTodasMenosEsta_Click(object sender2, EventArgs e1)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+                var itemSelecionado = Tbc_Application.SelectedIndex;
+
+                ApagaDireita(itemSelecionado);
+                ApagaEsqueda(itemSelecionado);
+
+            }
+            else
+            {
+                MessageBox.Show("Não existe aba para apagar!", "Comando inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        void ApagaDireita(int itemSelecionado)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+
+                for (var i = Tbc_Application.TabCount - 1; i > itemSelecionado; i += -1)
+                {
+                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                }
+
+
+
+            }
+        }
+
+        void ApagaEsqueda(int itemSelecionado)
+        {
+            if (!(Tbc_Application.SelectedTab == null))
+            {
+
+
+                for (var i = itemSelecionado - 1; i >= 0; i += -1)
+                {
+                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                }
+
+
+
+            }
+        }
     }
 }
