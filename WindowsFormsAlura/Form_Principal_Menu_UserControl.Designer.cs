@@ -218,6 +218,7 @@
             this.imageList_Imagens.Images.SetKeyName(4, "Frm_ValidaCPF2.png");
             this.imageList_Imagens.Images.SetKeyName(5, "Frm_ValidaSenha.png");
             this.imageList_Imagens.Images.SetKeyName(6, "folder.png");
+            this.imageList_Imagens.Images.SetKeyName(7, "user.png");
             // 
             // byteBankToolStripMenuItem
             // 
@@ -243,6 +244,7 @@
             this.clientesToolStripMenuItem.Name = "clientesToolStripMenuItem";
             this.clientesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.clientesToolStripMenuItem.Text = "Clientes";
+            this.clientesToolStripMenuItem.Click += new System.EventHandler(this.clientesToolStripMenuItem_Click);
             // 
             // Form_Principal_Menu_UserControl
             // 
