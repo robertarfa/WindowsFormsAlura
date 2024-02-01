@@ -23,6 +23,7 @@ namespace WindowsFormsAlura
 
             Lbl_Login.Text = "Usuário";
             Lbl_Password.Text = "Senha";
+            Txt_Password.PasswordChar = '*';
             Btn_Cancel.Text = "Cancel";
             Btn_Ok.Text = "OK";
         }

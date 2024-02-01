@@ -64,7 +64,7 @@
             this.windowsToolStripMenuItem});
             this.Menu_principal.Location = new System.Drawing.Point(0, 0);
             this.Menu_principal.Name = "Menu_principal";
-            this.Menu_principal.Size = new System.Drawing.Size(800, 28);
+            this.Menu_principal.Size = new System.Drawing.Size(800, 30);
             this.Menu_principal.TabIndex = 0;
             this.Menu_principal.Text = "menuStrip1";
             // 
@@ -200,10 +200,10 @@
             // 
             this.Tbc_Application.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Tbc_Application.ImageList = this.imageList_Imagens;
-            this.Tbc_Application.Location = new System.Drawing.Point(0, 28);
+            this.Tbc_Application.Location = new System.Drawing.Point(0, 30);
             this.Tbc_Application.Name = "Tbc_Application";
             this.Tbc_Application.SelectedIndex = 0;
-            this.Tbc_Application.Size = new System.Drawing.Size(800, 422);
+            this.Tbc_Application.Size = new System.Drawing.Size(800, 420);
             this.Tbc_Application.TabIndex = 1;
             this.Tbc_Application.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Tbc_Application_MouseDown);
             // 
