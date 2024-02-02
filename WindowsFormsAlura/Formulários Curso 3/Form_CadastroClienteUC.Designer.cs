@@ -45,7 +45,6 @@
             this.Lbl_Bairro = new System.Windows.Forms.Label();
             this.Txt_Bairro = new System.Windows.Forms.TextBox();
             this.Lbl_Estado = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.Lbl_Telefone = new System.Windows.Forms.Label();
             this.Txt_Telefone = new System.Windows.Forms.TextBox();
             this.Lbl_Profissao = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.Chk_TemPai = new System.Windows.Forms.CheckBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.Grp_endereco = new System.Windows.Forms.GroupBox();
+            this.Cmb_Estados = new System.Windows.Forms.ComboBox();
             this.Lbl_Cidade = new System.Windows.Forms.Label();
             this.Txt_Cidade = new System.Windows.Forms.TextBox();
             this.Grp_outros = new System.Windows.Forms.GroupBox();
@@ -88,7 +88,7 @@
             // 
             // Txt_CPF
             // 
-            this.Txt_CPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.Txt_CPF.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_CPF.Location = new System.Drawing.Point(546, 41);
             this.Txt_CPF.Name = "Txt_CPF";
@@ -106,7 +106,7 @@
             // 
             // Txt_NomeCliente
             // 
-            this.Txt_NomeCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.Txt_NomeCliente.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_NomeCliente.Location = new System.Drawing.Point(3, 41);
             this.Txt_NomeCliente.Name = "Txt_NomeCliente";
@@ -124,7 +124,7 @@
             // 
             // Txt_NomePai
             // 
-            this.Txt_NomePai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.Txt_NomePai.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_NomePai.Location = new System.Drawing.Point(3, 127);
             this.Txt_NomePai.Name = "Txt_NomePai";
@@ -142,7 +142,7 @@
             // 
             // Txt_NomeMae
             // 
-            this.Txt_NomeMae.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.Txt_NomeMae.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_NomeMae.Location = new System.Drawing.Point(3, 86);
             this.Txt_NomeMae.Name = "Txt_NomeMae";
@@ -176,7 +176,7 @@
             // 
             // Txt_Logradouro
             // 
-            this.Txt_Logradouro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.Txt_Logradouro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Logradouro.Location = new System.Drawing.Point(174, 46);
             this.Txt_Logradouro.Name = "Txt_Logradouro";
@@ -224,15 +224,6 @@
             this.Lbl_Estado.TabIndex = 18;
             this.Lbl_Estado.Text = "Estado";
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(321, 139);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(265, 22);
-            this.textBox1.TabIndex = 15;
-            // 
             // Lbl_Telefone
             // 
             this.Lbl_Telefone.AutoSize = true;
@@ -260,7 +251,7 @@
             // 
             // Txt_Profissao
             // 
-            this.Txt_Profissao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
+            this.Txt_Profissao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Txt_Profissao.Location = new System.Drawing.Point(341, 45);
             this.Txt_Profissao.Name = "Txt_Profissao";
@@ -386,6 +377,7 @@
             // 
             // Grp_endereco
             // 
+            this.Grp_endereco.Controls.Add(this.Cmb_Estados);
             this.Grp_endereco.Controls.Add(this.Lbl_Cidade);
             this.Grp_endereco.Controls.Add(this.Txt_Cidade);
             this.Grp_endereco.Controls.Add(this.Lbl_CEP);
@@ -397,13 +389,20 @@
             this.Grp_endereco.Controls.Add(this.Lbl_Bairro);
             this.Grp_endereco.Controls.Add(this.Txt_Bairro);
             this.Grp_endereco.Controls.Add(this.Lbl_Estado);
-            this.Grp_endereco.Controls.Add(this.textBox1);
             this.Grp_endereco.Location = new System.Drawing.Point(10, 296);
             this.Grp_endereco.Name = "Grp_endereco";
             this.Grp_endereco.Size = new System.Drawing.Size(769, 167);
             this.Grp_endereco.TabIndex = 30;
             this.Grp_endereco.TabStop = false;
             this.Grp_endereco.Text = "groupBox1";
+            // 
+            // Cmb_Estados
+            // 
+            this.Cmb_Estados.FormattingEnabled = true;
+            this.Cmb_Estados.Location = new System.Drawing.Point(318, 139);
+            this.Cmb_Estados.Name = "Cmb_Estados";
+            this.Cmb_Estados.Size = new System.Drawing.Size(146, 24);
+            this.Cmb_Estados.TabIndex = 21;
             // 
             // Lbl_Cidade
             // 
@@ -481,7 +480,6 @@
         private System.Windows.Forms.Label Lbl_Bairro;
         private System.Windows.Forms.TextBox Txt_Bairro;
         private System.Windows.Forms.Label Lbl_Estado;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label Lbl_Telefone;
         private System.Windows.Forms.TextBox Txt_Telefone;
         private System.Windows.Forms.Label Lbl_Profissao;
@@ -505,5 +503,6 @@
         private System.Windows.Forms.RadioButton Rdb_Indefinido;
         private System.Windows.Forms.RadioButton Rdb_Feminino;
         private System.Windows.Forms.RadioButton Rdb_Masculino;
+        private System.Windows.Forms.ComboBox Cmb_Estados;
     }
 }
