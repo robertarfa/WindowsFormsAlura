@@ -17,6 +17,7 @@ namespace WindowsFormsAlura
         int ControlHelloWorld = 0;
         int ControlValidaCPF2 = 0;
         int ControleArquivoImagem = 0;
+        int ControleCadastroCliente = 0;
 
         public Form_Principal_Menu_UserControl()
         {
@@ -26,6 +27,7 @@ namespace WindowsFormsAlura
             apagarAbaToolStripMenuItem.Enabled = false;
             abrirImagemToolStripMenuItem.Enabled = false;
             desconectarToolStripMenuItem.Enabled = false;
+            cadastrosToolStripMenuItem.Enabled = false;
         }
 
         private void demonstraçãoKeyToolStripMenuItem_Click(object sender, EventArgs e)
@@ -115,7 +117,7 @@ namespace WindowsFormsAlura
 
             if (!(Tbc_Application.SelectedTab == null))
             {
-                Tbc_Application.TabPages.Remove(Tbc_Application.SelectedTab);
+                ApagaAba(Tbc_Application.SelectedTab);
 
             }
             else
@@ -179,6 +181,7 @@ namespace WindowsFormsAlura
                     apagarAbaToolStripMenuItem.Enabled = true;
                     abrirImagemToolStripMenuItem.Enabled = true;
                     desconectarToolStripMenuItem.Enabled = true;
+                    cadastrosToolStripMenuItem.Enabled = true;
                     conectarToolStripMenuItem.Enabled = false;
 
                     MessageBox.Show("Bem vindo " + login + " !", "Mensagem", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -209,13 +212,14 @@ namespace WindowsFormsAlura
                 //Sempre que for Collection, precisa fechar de trás pra frente
                 for (int i = Tbc_Application.TabPages.Count - 1; i >= 0; i += -1)
                 {
-                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                    ApagaAba(Tbc_Application.TabPages[i]);
                 }
 
                 novoToolStripMenuItem.Enabled = false;
                 apagarAbaToolStripMenuItem.Enabled = false;
                 abrirImagemToolStripMenuItem.Enabled = false;
                 desconectarToolStripMenuItem.Enabled = false;
+                cadastrosToolStripMenuItem.Enabled = false;
                 conectarToolStripMenuItem.Enabled = true;
             }
 
@@ -279,7 +283,7 @@ namespace WindowsFormsAlura
         {
             if (!(Tbc_Application.SelectedTab == null))
             {
-                Tbc_Application.TabPages.Remove(Tbc_Application.SelectedTab);
+                ApagaAba(Tbc_Application.SelectedTab);
 
             }
             else
@@ -347,7 +351,7 @@ namespace WindowsFormsAlura
 
                 for (var i = Tbc_Application.TabCount - 1; i > itemSelecionado; i += -1)
                 {
-                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                    ApagaAba(Tbc_Application.TabPages[i]);
                 }
 
 
@@ -363,12 +367,46 @@ namespace WindowsFormsAlura
 
                 for (var i = itemSelecionado - 1; i >= 0; i += -1)
                 {
-                    Tbc_Application.TabPages.Remove(Tbc_Application.TabPages[i]);
+                    ApagaAba(Tbc_Application.TabPages[i]);
                 }
 
 
 
             }
+        }
+
+        private void clientesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            if (ControleCadastroCliente > 0)
+            {
+                MessageBox.Show("É possível abrir somente uma aba de cadastro", "ByteBank", MessageBoxButtons.OK);
+                return;
+            }
+
+
+            ControleCadastroCliente += 1;
+
+            Form_CadastroClienteUC f = new Form_CadastroClienteUC();
+
+            TabPage tb = new TabPage();
+
+            tb.Text = "Cadastro de Clientes";
+            tb.Name = "Cadastro de Clientes";
+
+            tb.ImageIndex = 7;
+
+            tb.Controls.Add(f);
+
+            Tbc_Application.TabPages.Add(tb);
+        }
+
+        void ApagaAba(TabPage TB)
+        {
+            if (TB.Name.Contains("Clientes"))
+                ControleCadastroCliente = 0;
+
+            Tbc_Application.TabPages.Remove(TB);
         }
     }
 }
