@@ -269,7 +269,7 @@
             // Lbl_RendaFamiliar
             // 
             this.Lbl_RendaFamiliar.AutoSize = true;
-            this.Lbl_RendaFamiliar.Location = new System.Drawing.Point(6, 69);
+            this.Lbl_RendaFamiliar.Location = new System.Drawing.Point(6, 71);
             this.Lbl_RendaFamiliar.Name = "Lbl_RendaFamiliar";
             this.Lbl_RendaFamiliar.Size = new System.Drawing.Size(99, 16);
             this.Lbl_RendaFamiliar.TabIndex = 24;
@@ -277,7 +277,7 @@
             // 
             // Txt_RendaFamiliar
             // 
-            this.Txt_RendaFamiliar.Location = new System.Drawing.Point(6, 85);
+            this.Txt_RendaFamiliar.Location = new System.Drawing.Point(6, 87);
             this.Txt_RendaFamiliar.Name = "Txt_RendaFamiliar";
             this.Txt_RendaFamiliar.Size = new System.Drawing.Size(328, 22);
             this.Txt_RendaFamiliar.TabIndex = 18;
