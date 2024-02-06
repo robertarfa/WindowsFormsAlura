@@ -40,6 +40,12 @@ namespace WindowsFormsAlura
             Rdb_Masculino.Text = "Masculino";
             Rdb_Indefinido.Text = "Indefinido";
 
+            Tls_Principal.Items[0].ToolTipText = "Incluir na base de dados um novo cliente";
+            Tls_Principal.Items[1].ToolTipText = "Recuperar um cliente já cadastrado na base";
+            Tls_Principal.Items[2].ToolTipText = "Atualizar um cliente existente";
+            Tls_Principal.Items[3].ToolTipText = "Apaga o cliente selecionado";
+            Tls_Principal.Items[4].ToolTipText = "Limpa os dados da tela";
+
             Cmb_Estados.Items.Clear();
             Cmb_Estados.Items.Add("Acre (AC)");
             Cmb_Estados.Items.Add("Alagoas(AL)");
@@ -82,6 +88,29 @@ namespace WindowsFormsAlura
             }
         }
 
+        private void novoToolStripButton_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void abrirToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void salvarToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void apagaToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void limpaToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

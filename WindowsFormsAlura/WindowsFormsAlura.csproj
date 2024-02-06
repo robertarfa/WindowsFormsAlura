@@ -258,11 +258,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ExcluirBarra.png" />
     <Content Include="Imagens\Cadastros.png" />
     <Content Include="Imagens\DeleteAll.png" />
     <Content Include="Imagens\DeleteLeft.png" />
     <Content Include="Imagens\DeleteRight.png" />
     <Content Include="Imagens\DeleteTab.png" />
+    <None Include="Imagens\ExcluirBarra.png" />
     <Content Include="Imagens\Frm_DemonstracaoKey.ico" />
     <Content Include="Imagens\Frm_DemonstracaoKey.png" />
     <Content Include="Imagens\Frm_HelloWorld.ico" />
@@ -276,7 +278,9 @@
     <Content Include="Imagens\Frm_ValidaCPF2.png" />
     <Content Include="Imagens\Frm_ValidaSenha.ico" />
     <Content Include="Imagens\Frm_ValidaSenha.png" />
+    <None Include="Imagens\LimparBarra.png" />
     <Content Include="Imagens\user.png" />
+    <Content Include="LimparBarra.png" />
     <None Include="Imagens\key.png" />
     <Content Include="Imagens\money.png" />
     <Content Include="Imagens\Question.ico" />
