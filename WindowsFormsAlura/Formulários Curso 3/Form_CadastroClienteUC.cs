@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CursoWindowsFormsBiblioteca.Classes;
 
 namespace WindowsFormsAlura
 {
@@ -90,7 +92,20 @@ namespace WindowsFormsAlura
 
         private void novoToolStripButton_Click(object sender, EventArgs e)
         {
+            C_Cliente.Single C = new C_Cliente.Single();
 
+            try
+            {
+                C.Id = Txt_codigo.Text;
+                C.ValidaClasse();
+                MessageBox.Show("Classe foi inicializadas sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            }
+            catch (ValidationException Ex)
+            {
+
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void abrirToolStripButton_Click(object sender, EventArgs e)
