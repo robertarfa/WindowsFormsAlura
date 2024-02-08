@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using CursoWindowsFormsBiblioteca.Classes;
+using Microsoft.VisualBasic;
 
 namespace WindowsFormsAlura
 {
@@ -96,14 +97,21 @@ namespace WindowsFormsAlura
 
             try
             {
-                C.Id = Txt_codigo.Text;
+
+                C = LeituraFormulario();
                 C.ValidaClasse();
+                C.ValidaComplemento();
                 MessageBox.Show("Classe foi inicializadas sem erros", "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (ValidationException Ex)
             {
 
+                MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            catch (Exception Ex)
+            {
+                //Pra exibir o que está no throw Exception como popup
                 MessageBox.Show(Ex.Message, "ByteBank", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -126,6 +134,73 @@ namespace WindowsFormsAlura
         private void limpaToolStripButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        C_Cliente.Single LeituraFormulario()
+        {
+            C_Cliente.Single C = new C_Cliente.Single();
+
+            C.Id = Txt_codigo.Text;
+            C.Nome = Txt_NomeCliente.Text;
+            C.NomeDaMae = Txt_NomeMae.Text;
+            C.NomeDoPai = Txt_NomePai.Text;
+            if (Chk_TemPai.Checked)
+            {
+                C.NaoTemPai = true;
+            }
+            else
+            {
+                C.NaoTemPai = false;
+            }
+            if (Rdb_Masculino.Checked)
+            {
+                C.Genero = 0;
+            }
+            else
+            if (Rdb_Feminino.Checked)
+            {
+                C.Genero = 1;
+            }
+            if (Rdb_Indefinido.Checked)
+            {
+                C.Genero = 2;
+            }
+            C.Cpf = Txt_CPF.Text;
+
+            C.Cep = Txt_CEP.Text;
+            C.Logradouro = Txt_Logradouro.Text;
+            C.Complemento = Txt_Complemento.Text;
+            C.Cidade = Txt_Cidade.Text;
+            C.Bairro = Txt_Bairro.Text;
+
+            if (Cmb_Estados.SelectedIndex < 0)
+            {
+                C.Estado = "";
+            }
+            else
+            {
+                C.Estado = Cmb_Estados.Items[Cmb_Estados.SelectedIndex].ToString();
+            }
+
+            C.Telefone = Txt_Telefone.Text;
+            C.Profissao = Txt_Profissao.Text;
+
+            if (Information.IsNumeric(Txt_RendaFamiliar.Text))
+            {
+                Double vRenda = Convert.ToDouble(Txt_RendaFamiliar.Text);
+
+                if (vRenda < 0)
+                {
+                    C.RendaFamiliar = 0;
+                }
+                else
+                {
+                    C.RendaFamiliar = vRenda;
+                }
+            }
+
+
+            return C;
         }
     }
 }
