@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CursoWindowsFormsBiblioteca;
 using CursoWindowsFormsBiblioteca.Classes;
 using Microsoft.VisualBasic;
 
@@ -93,11 +94,10 @@ namespace WindowsFormsAlura
 
         private void novoToolStripButton_Click(object sender, EventArgs e)
         {
-            C_Cliente.Single C = new C_Cliente.Single();
 
             try
             {
-
+                C_Cliente.Single C = new C_Cliente.Single();
                 C = LeituraFormulario();
                 C.ValidaClasse();
                 C.ValidaComplemento();
@@ -201,6 +201,41 @@ namespace WindowsFormsAlura
 
 
             return C;
+        }
+
+        private void Txt_CEP_Leave(object sender, EventArgs e)
+        {
+
+            string vCep = Txt_CEP.Text;
+
+            if (vCep != "" && vCep.Length == 8 && Information.IsNumeric(vCep))
+            {
+                var vJson = Cls_Uteis.GeraJSONCEP(vCep);
+
+                C_CEP.Single CEP = new C_CEP.Single();
+
+                CEP = C_CEP.DesserializeSingle(vJson);
+
+                Txt_Logradouro.Text = CEP.Logradouro;
+                Txt_Bairro.Text = CEP.Bairro;
+                Txt_Cidade.Text = CEP.Localidade;
+
+                Cmb_Estados.SelectedIndex = -1;
+
+                for (int i = 0; i <= Cmb_Estados.Items.Count - 1; i++)
+                {
+                    var vPos = Strings.InStr(Cmb_Estados.Items[i].ToString(), "(" + CEP.Uf + ")");
+
+                    if (vPos > 0)
+                    {
+                        Cmb_Estados.SelectedIndex = i;
+                    }
+                }
+            }
+
+
+
+
         }
     }
 }
